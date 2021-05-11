@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PreviewViewController" customModule="VisionHacking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-N5-4Gq" userLabel="Debug View">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ti5-Is-KHb" userLabel="Reality Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-P4-WQF">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi6-Cw-Nac">
+                                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sq7-P4-WQF" secondAttribute="trailing" id="3hx-SC-WaA"/>
+                                    <constraint firstAttribute="bottom" secondItem="sq7-P4-WQF" secondAttribute="bottom" id="Uzh-qZ-ne2"/>
+                                    <constraint firstItem="sq7-P4-WQF" firstAttribute="top" secondItem="lFs-N5-4Gq" secondAttribute="top" id="YWY-3U-5OY"/>
+                                    <constraint firstItem="vi6-Cw-Nac" firstAttribute="top" secondItem="lFs-N5-4Gq" secondAttribute="top" constant="8" id="aE8-tz-qhe"/>
+                                    <constraint firstItem="vi6-Cw-Nac" firstAttribute="leading" secondItem="lFs-N5-4Gq" secondAttribute="leading" constant="8" id="bMf-MC-Myb"/>
+                                    <constraint firstItem="sq7-P4-WQF" firstAttribute="leading" secondItem="lFs-N5-4Gq" secondAttribute="leading" id="ik0-mU-drf"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vi6-Cw-Nac" secondAttribute="trailing" constant="20" symbolic="YES" id="woh-l1-nge"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="lFs-N5-4Gq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BS4-uO-8w8"/>
+                            <constraint firstItem="lFs-N5-4Gq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Juj-v6-t22"/>
+                            <constraint firstItem="lFs-N5-4Gq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Uee-zg-lv5"/>
+                            <constraint firstItem="lFs-N5-4Gq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yyJ-Vx-mCV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ContainerView" destination="8bC-Xf-vdC" id="blK-4t-1TL"/>
+                        <outlet property="centerPixelLabel" destination="vi6-Cw-Nac" id="5U7-Av-u3z"/>
+                        <outlet property="debugView" destination="lFs-N5-4Gq" id="R9I-Ec-V7p"/>
+                        <outlet property="pixelatedImageView" destination="sq7-P4-WQF" id="aii-t4-SWy"/>
+                        <outlet property="realityImageView" destination="ti5-Is-KHb" id="kes-eh-8cj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.28185907046478" y="138.40000000000001"/>
+        </scene>
+    </scenes>
+</document>
